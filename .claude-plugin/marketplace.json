@@ -1,0 +1,34 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "mattys-claude-skills",
+  "description": "API design skills for Claude Code - RESTful conventions and contract-first workflows",
+  "owner": {
+    "name": "matty",
+    "url": "https://github.com/matty"
+  },
+  "repository": "https://github.com/matty/claude-skills",
+  "plugins": [
+    {
+      "name": "restful-api-design",
+      "description": "Use when designing or reviewing REST API endpoints, resource naming, HTTP methods, status codes, pagination, versioning, or error response structures",
+      "version": "1.0.0",
+      "source": "./restful-api-design",
+      "author": {
+        "name": "matty"
+      },
+      "category": "development",
+      "homepage": "https://github.com/matty/claude-skills/tree/main/restful-api-design"
+    },
+    {
+      "name": "contract-first-api-design",
+      "description": "Use when planning a new API or new endpoints — define the OpenAPI spec as part of the planning phase before any implementation code, so design decisions are reviewed and agreed upon first",
+      "version": "1.0.0",
+      "source": "./contract-first-api-design",
+      "author": {
+        "name": "matty"
+      },
+      "category": "development",
+      "homepage": "https://github.com/matty/claude-skills/tree/main/contract-first-api-design"
+    }
+  ]
+}
