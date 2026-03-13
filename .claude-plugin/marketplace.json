@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "mattys-claude-skills",
-  "description": "API design skills for Claude Code - RESTful conventions and contract-first workflows",
+  "description": "API design and DevOps skills for Claude Code - RESTful conventions, contract-first workflows, and Azure Pipelines authoring",
   "owner": {
     "name": "matty",
     "url": "https://github.com/matty"
@@ -29,6 +29,54 @@
       },
       "category": "development",
       "homepage": "https://github.com/matty/claude-skills/tree/main/contract-first-api-design"
+    },
+    {
+      "name": "azure-devops-pipeline-lsp",
+      "description": "Azure Pipelines language server for schema validation, completions, and hover docs in pipeline YAML files",
+      "version": "1.0.0",
+      "source": "./azure-devops-pipeline-lsp",
+      "author": {
+        "name": "matty"
+      },
+      "category": "development",
+      "strict": false,
+      "homepage": "https://github.com/matty/claude-skills/tree/main/azure-devops-pipeline-lsp",
+      "lspServers": {
+        "azure-pipelines": {
+          "command": "azure-pipelines-language-server",
+          "args": ["--stdio"],
+          "extensionToLanguage": {
+            ".yml": "yaml",
+            ".yaml": "yaml"
+          },
+          "settings": {
+            "yaml": {
+              "schemas": {
+                "https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/main/service-schema.json": [
+                  "azure-pipelines.yml",
+                  "azure-pipelines.yaml",
+                  ".azure-pipelines.yml",
+                  ".azure-pipelines.yaml",
+                  "**/azure-pipelines/**/*.yml",
+                  "**/azure-pipelines/**/*.yaml",
+                  "**/.azure-pipelines/**/*.yml",
+                  "**/.azure-pipelines/**/*.yaml",
+                  "**/.pipelines/**/*.yml",
+                  "**/.pipelines/**/*.yaml",
+                  "**/pipelines/**/*.yml",
+                  "**/pipelines/**/*.yaml",
+                  "**/.azure/**/*.yml",
+                  "**/.azure/**/*.yaml",
+                  "vsts-ci.yml",
+                  "vsts-ci.yaml",
+                  ".vsts-ci.yml",
+                  ".vsts-ci.yaml"
+                ]
+              }
+            }
+          }
+        }
+      }
     }
   ]
 }
