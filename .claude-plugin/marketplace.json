@@ -65,6 +65,8 @@
                   "**/.pipelines/**/*.yaml",
                   "**/pipelines/**/*.yml",
                   "**/pipelines/**/*.yaml",
+                  "**/.azure/**/*.yml",
+                  "**/.azure/**/*.yaml",
                   "vsts-ci.yml",
                   "vsts-ci.yaml",
                   ".vsts-ci.yml",
